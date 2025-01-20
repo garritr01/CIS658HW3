@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: rgb(32, 32, 32);
+  color: rgb(254, 251, 251);
+}
+
+.mainBody {
+  overflow: visible;
+}
+
+body {
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  font-family: monospace;
+}
+
+.mainDiv {
+  overflow: visible;
+}
+
+div {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  display: inline-block;
+  text-align: left;
+  font-size: 30px;
+  border-bottom: 2px solid #4c4c6f;
+  margin-right: 10%;
+  margin-top: 10px;
+}
+
+h2 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+h3 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: left;
+  font-size: 16px;
+}
+
+p {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.bkgImg {
+  position: absolute;
+  display: block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: inherit;
+}
+
+.acronym {
+  position: relative;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.acronym::after {
+  content: "\200B";
+  /* Zero-width space character */
+  text-decoration: none;
+  /* Prevent underline on the pseudo-element */
+}
+
+.expand {
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: -100%;
+  border: 1px solid #4c4c6f;
+  white-space: nowrap;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.dropdownLink {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.h2DropdownLink {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdownLink::after {
+  content: "➤";
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 0.2s ease;
+}
+
+.dropdownLink.active::after {
+  transform: rotate(90deg);
+}
+
+.h2DropdownLink::after {
+  content: "➤";
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 0.2s ease;
+}
+
+.h2DropdownLink.active::after {
+  transform: rotate(90deg);
+}
+
+.dropdown {
+  display: none;
+  position: relative;
+  top: -100%;
+  border-left: 2px solid #4c4c6f;
+  text-decoration: none;
+  color: #4c4c6f;
+  font-size: 14px;
+  padding-left: 8px;
+  margin-left: 8px;
+  line-height: 1.0;
+}
+
+.dropdown p {
+  padding-bottom: 8px;
+}
+
+.dropdown p:first-child {
+  padding-top: 4px;
+}
+
+.dropdown p:last-child {
+  padding-bottom: 4px;
+}
+
+.dropdown div {
+  padding-bottom: 8px;
+}
+
+.dropdown div:first-child {
+  padding-top: 4px;
+}
+
+.dropdown div:last-child {
+  padding-bottom: 4px;
+}
+
+.displayOptions {
+  display: visible;
+}
+
+.displayLink {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.displayLink.active {
+  text-decoration: underline;
+}
+
+.displayText {
+  display: none;
+}
+
+.displaySelections {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.fakeFrontHTML {
+  display: inline-block;
+  color: #569cd6;
+}
+
+.fakeFrontHTML::before {
+  content: '<';
+  color: #808080;
+}
+
+.fakeFrontHTML::after {
+  content: '>';
+  color: #808080;
+}
+
+.fakeBackHTML {
+  display: inline-block;
+  color: #569cd6;
+}
+
+.fakeBackHTML::before {
+  content: '</';
+  color: #808080;
+}
+
+.fakeBackHTML::after {
+  content: '>';
+  color: #808080;
+}
