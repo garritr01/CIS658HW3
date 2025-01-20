@@ -1,3 +1,4 @@
+/*
 * {
   box-sizing: border-box;
   margin-top: 0px;
@@ -5,10 +6,7 @@
   background-color: rgb(32, 32, 32);
   color: rgb(254, 251, 251);
 }
-
-.mainBody {
-  overflow: visible;
-}
+*/
 
 body {
   overflow: hidden;
@@ -17,14 +15,15 @@ body {
   font-family: monospace;
 }
 
-.mainDiv {
-  overflow: visible;
-}
-
 div {
   overflow: hidden;
   margin: 0px;
   padding: 0px;
+}
+
+a {
+  display: block;
+  padding-top: 20px;
 }
 
 h1 {
@@ -62,8 +61,10 @@ p {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: transparent;
   opacity: 0.25;
   z-index: inherit;
+  pointer-events: none;
 }
 
 .acronym {
@@ -144,6 +145,7 @@ p {
   padding-left: 8px;
   margin-left: 8px;
   line-height: 1.0;
+  z-index: 2;
 }
 
 .dropdown p {
@@ -194,34 +196,4 @@ p {
 .displaySelections {
   padding-top: 4px;
   padding-bottom: 4px;
-}
-
-.fakeFrontHTML {
-  display: inline-block;
-  color: #569cd6;
-}
-
-.fakeFrontHTML::before {
-  content: '<';
-  color: #808080;
-}
-
-.fakeFrontHTML::after {
-  content: '>';
-  color: #808080;
-}
-
-.fakeBackHTML {
-  display: inline-block;
-  color: #569cd6;
-}
-
-.fakeBackHTML::before {
-  content: '</';
-  color: #808080;
-}
-
-.fakeBackHTML::after {
-  content: '>';
-  color: #808080;
 }
